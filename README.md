@@ -10,22 +10,17 @@ erDiagram
         string password
         string address
         string phone
-        string profil_pic
+        string profile_pic
         datetime created_at
     }
 
     PRODUCTS {
       string product_id PK
+      string kategory_id FK
       string name
-      string decription
+      string description
       int price
       string image_url
-      string flash_shale
-      int discount
-      int renew_count
-      string size
-      string varian
-      string kategory
     }
 
     KATEGORY {
@@ -51,51 +46,52 @@ erDiagram
     string cart_item_id PK
     string cart_id FK
     string product_id FK
-    string product_variant_id FK
-    string product_size FK
+    string variant_id FK
+    string product_size_id FK
     int quantity
     }
 
     PRODUCT_VARIANT{
       string variant_id PK
       string product_id FK
-      string size
       string temperature
       int add_price
     }
 
     PRODUCT_SIZE{
-      string product_size PK
+      string product_size_id PK
+      string product_id FK
       string name
       int add_price
-
     }
 
     TRANSACTION {
       string transaction_id PK
-      int quantity
+      string user_id FK
+      string promo_id FK
       string fullname
       string email
       string address
-      int subtotal
       string delivery_type
+      int subtotal
       int tax
       int total
-      string tanggal
+      datetime tanggal
     }
 
     TRANSACTION_PRODUCT {
       string transaction_product_id PK
       string transaction_id FK
       string product_id FK
+      string variant_id FK
+      string product_size_id FK
       int quantity
-      string product_variant_id FK 
-      string product_size FK
+      int price_at_purchase
     }
 
     PRODUCT_IMAGES{
       string product_images_id PK
-      string produc_id FK
+      string product_id FK
       string path
     }
 
@@ -109,6 +105,7 @@ erDiagram
 
     DISCOUNT{
       string discount_id PK
+      string product_id FK
       boolean flash_sale
       string description
       int discount_rate
