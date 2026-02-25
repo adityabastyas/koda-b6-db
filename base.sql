@@ -131,6 +131,22 @@ INSERT INTO "products" ("kategory_id", "name", "description", "price", "image_ur
 VALUES
  (1, 'Caramel Latte', 'Kopi susu dengan sirup karamel yang manis', 35000, 'caramel_latte.jpg'),
  (1, 'Espresso', 'Kopi hitam tanpa susu', 25000, 'espresso.jpg'),
- (1, 'Kopi dengan foam susu', 32000, 'espresso.jpg')
+ (1, 'Cappuccino', 'Kopi dengan foam susu', 32000, 'cappuccino.jpg'),
+ (1, 'Americano', 'Espresso yang dicampur air panas', 28000, 'americano.jpg'),
+ (1, 'Vietnamese Coffee', 'Kopi susu kental manis ala vietnam', 33000, 'vietnamese_coffee.jpg'),
+ (2, 'Matcha Latte', 'Minuman matcha dengan susu yang creamy', 35000, 'matcha_latte.jpg'),
+ (2, 'Taro Latte', 'Minuman talas ungu dengan susu', 35000, 'taro_latte.jpg'),
+ (2, 'Chocolate', 'Minuman coklat hangat yang kaya rasa', 30000, 'chocolate.jpg'),
+ (3, 'Croissant', 'Roti croissant mentega yang renyah', 25000, 'croissant.jpg'),
+ (3, 'Cheesecake', 'Kue keju lembut dengan topping strawberry', 32000, 'cheesecake.jpg');
 
-SELECT * FROM "products";  
+SELECT "product_id", "kategory_id", "name", "description", "price", "image_url" FROM "products";  
+-- SELECT 
+--     p.product_id,
+--     p.name AS product_name,
+--     p.price,
+--     k.name AS category_name
+-- FROM "products" p
+-- JOIN "kategory" k 
+--     ON p.kategory_id = k.kategory_id
+-- WHERE k.name = 'Coffee';
