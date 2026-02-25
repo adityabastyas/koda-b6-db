@@ -130,6 +130,7 @@ INSERT INTO "kategory" ("name")VALUES ('Food');
 INSERT INTO "products" ("kategory_id", "name", "description", "price", "image_url")
 VALUES
  (1, 'Caramel Latte', 'Kopi susu dengan sirup karamel yang manis', 35000, 'caramel_latte.jpg'),
- (1, 'Espresso', 'Kopi hitam pekat tanpa susu', 25000, 'espresso.jpg');
+ (1, 'Espresso', 'Kopi hitam tanpa susu', 25000, 'espresso.jpg'),
+ (1, 'Kopi dengan foam susu', 32000, 'espresso.jpg')
 
-SELECT * FROM "products";
+SELECT * FROM "products";  
