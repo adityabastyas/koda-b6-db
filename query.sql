@@ -1,3 +1,13 @@
+--mendapakan 1 product  yang sudah di agregasikan dengan variant yang di pilih
+
+-- yg harus di munculkan adalah
+-- nama product
+-- final price
+-- variant
+-- size
+
+-- satu product aja duluu
+
 SELECT 
    "products"."name" AS "nama_product", 
    "products"."price" + "product_variant"."add_price" + "product_size"."add_price" AS "final_price",
@@ -7,6 +17,6 @@ FROM "products"
 JOIN "product_variant" ON "products"."product_id" = "product_variant"."product_id"
 JOIN "product_size" ON "products"."product_id" = "product_size"."product_id"
 WHERE "products"."product_id" = 1
-AND "product_variant"."temperature" = 'Hot'
-AND "product_size"."name" = 'Large';
+AND "product_variant"."variant_id" = 2
+AND "product_size"."product_size_id" = 3
 
