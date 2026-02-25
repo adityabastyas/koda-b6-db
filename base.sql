@@ -246,3 +246,20 @@ VALUES
 (10, 10, 'Cheesecakenya lembut banget, ga terlalu sweet', 5);
 
 SELECT "reviews_id", "product_id", "user_id", "message", "rating" FROM "reviews";
+
+-- discount
+
+INSERT INTO "discount" ("product_id", "flash_sale", "description", "discount_rate")
+VALUES
+(1, true, 'Flash sale Caramel Latte', 50),
+(2, false, 'Diskon reguler Espresso', 10),
+(3, true, 'Flash sale Cappuccino', 30),
+(4, false, 'Diskon reguler Americano', 15),
+(5, true, 'Flash sale Vietnamese Coffee', 25),
+(6, false, 'Diskon reguler Matcha Latte', 10),
+(7, true, 'Flash sale Taro Latte', 20),
+(8, false, 'Diskon reguler Chocolate', 15),
+(9, true, 'Flash sale Croissant', 30),
+(10, false, 'Diskon reguler Cheesecake', 10);
+
+SELECT "discount_id", "product_id", "flash_sale", "description", "discount_rate" FROM "discount";
