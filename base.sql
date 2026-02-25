@@ -264,6 +264,24 @@ VALUES
 
 SELECT "discount_id", "product_id", "flash_sale", "description", "discount_rate" FROM "discount";
 
+--transaction_product
+
+INSERT INTO "transaction_product" ("transaction_id", "product_id", "variant_id", "product_size_id", "quantity", "price_at_purchase")
+VALUES
+(1, 1, 1, 1, 1, 35000),
+(2, 2, 1, 1, 1, 25000),
+(3, 3, 1, 1, 1, 32000),
+(4, 4, 1, 1, 1, 28000),
+(5, 5, 1, 1, 1, 33000),
+(6, 6, 1, 1, 1, 35000),
+(7, 7, 1, 1, 2, 35000),
+(8, 8, 1, 1, 1, 30000),
+(9, 9, 1, 1, 2, 25000),
+(10, 10, 1, 1, 1, 32000);
+
+SELECT "transaction_product_id", "transaction_id", "product_id", "variant_id", "product_size_id", "quantity", "price_at_purchase" FROM "transaction_product";
+
+
 --transaction
 INSERT INTO "transaction" ("user_id", "promo_id", "fullname", "email", "address", "delivery_type", "subtotal", "tax", "total")
 VALUES
