@@ -194,3 +194,20 @@ VALUES
 ('Grand Opening', 'Diskon spesial pembukaan cabang baru', 'cashback', 35);
 
 SELECT "promo_id", "title", "description", "promo_type", "discount_value" FROM "promo";
+
+--
+-- variant, size
+
+INSERT INTO "product_variant" ("product_id", "temperature", "add_price")
+VALUES
+(1, 'Ice', 0),
+(1, 'Hot', 1000);
+
+INSERT INTO "product_size" ("product_id", "name", "add_price")
+VALUES
+(1, 'Regular', 0),
+(1, 'Medium', 2000),
+(1, 'Large', 5000);
+
+SELECT "variant_id", "product_id", "temperature", "add_price" FROM "product_variant";
+SELECT "product_size_id", "product_id", "name", "add_price" FROM "product_size";
