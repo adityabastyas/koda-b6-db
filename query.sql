@@ -41,3 +41,15 @@ FROM (
     SELECT 3 AS "product_id", 7 AS "quantity"
 ) AS "orders"
 JOIN "products" ON "products"."product_id" = "orders"."product_id";
+
+
+-----
+
+---halaman home landing page
+-- amati, dan query apa saja yg dibutuhkan
+
+SELECT "product_id", "name", "description", "price", "image_url" FROM "products"
+LIMIT 4
+
+SELECT "users"."full_name", "reviews"."message", "reviews"."rating" FROM "reviews"
+JOIN "users" ON "reviews"."user_id" = "users"."users_id"
