@@ -200,14 +200,29 @@ SELECT "promo_id", "title", "description", "promo_type", "discount_value" FROM "
 
 INSERT INTO "product_variant" ("product_id", "temperature", "add_price")
 VALUES
-(1, 'Ice', 0),
-(1, 'Hot', 1000);
+(1, 'Ice', 0), (1, 'Hot', 1000),
+(2, 'Ice', 0), (2, 'Hot', 1000),
+(3, 'Ice', 0), (3, 'Hot', 1000),
+(4, 'Ice', 0), (4, 'Hot', 1000),
+(5, 'Ice', 0), (5, 'Hot', 1000),
+(6, 'Ice', 0), (6, 'Hot', 1000),
+(7, 'Ice', 0), (7, 'Hot', 1000),
+(8, 'Ice', 0), (8, 'Hot', 1000),
+(9, 'Ice', 0), (9, 'Hot', 1000),
+(10, 'Ice', 0), (10, 'Hot', 1000);
 
 INSERT INTO "product_size" ("product_id", "name", "add_price")
 VALUES
-(1, 'Regular', 0),
-(1, 'Medium', 2000),
-(1, 'Large', 5000);
+(1, 'Regular', 0), (1, 'Medium', 2000), (1, 'Large', 5000),
+(2, 'Regular', 0), (2, 'Medium', 2000), (2, 'Large', 5000),
+(3, 'Regular', 0), (3, 'Medium', 2000), (3, 'Large', 5000),
+(4, 'Regular', 0), (4, 'Medium', 2000), (4, 'Large', 5000),
+(5, 'Regular', 0), (5, 'Medium', 2000), (5, 'Large', 5000),
+(6, 'Regular', 0), (6, 'Medium', 2000), (6, 'Large', 5000),
+(7, 'Regular', 0), (7, 'Medium', 2000), (7, 'Large', 5000),
+(8, 'Regular', 0), (8, 'Medium', 2000), (8, 'Large', 5000),
+(9, 'Regular', 0), (9, 'Medium', 2000), (9, 'Large', 5000),
+(10, 'Regular', 0), (10, 'Medium', 2000), (10, 'Large', 5000);
 
 SELECT "variant_id", "product_id", "temperature", "add_price" FROM "product_variant";
 SELECT "product_size_id", "product_id", "name", "add_price" FROM "product_size";
@@ -304,3 +319,4 @@ VALUES
 (6), (7), (8), (9), (10);
 
 SELECT "cart_id", "user_id" FROM "cart";
+
