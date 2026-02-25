@@ -263,3 +263,19 @@ VALUES
 (10, false, 'Diskon reguler Cheesecake', 10);
 
 SELECT "discount_id", "product_id", "flash_sale", "description", "discount_rate" FROM "discount";
+
+--transaction
+INSERT INTO "transaction" ("user_id", "promo_id", "fullname", "email", "address", "delivery_type", "subtotal", "tax", "total")
+VALUES
+(1, 1, 'adit', 'adit@email.com', 'Jakarta Selatan', 'delivery', 35000, 3500, 38500),
+(2, 2, 'anton', 'anton@email.com', 'Bandung', 'takeaway', 25000, 2500, 27500),
+(3, 3, 'wildan', 'wildan@email.com', 'Surabaya', 'dine-in', 32000, 3200, 35200),
+(4, 4, 'aska', 'aska@email.com', 'Medan', 'delivery', 28000, 2800, 30800),
+(5, 5, 'ghifar', 'ghifar@email.com', 'Depok', 'takeaway', 33000, 3300, 36300),
+(6, 6, 'hilmi', 'hilmi@email.com', 'Bekasi', 'dine-in', 35000, 3500, 38500),
+(7, 7, 'jaka', 'jaka@email.com', 'Yogyakarta', 'delivery', 35000, 3500, 38500),
+(8, 8, 'virgil', 'virgil@email.com', 'Semarang', 'takeaway', 30000, 3000, 33000),
+(9, 9, 'hilal', 'hilal@email.com', 'Malang', 'dine-in', 25000, 2500, 27500),
+(10, 10, 'vincent', 'vincent@email.com', 'Bali', 'delivery', 32000, 3200, 35200);
+
+SELECT "transaction_id", "user_id", "promo_id", "fullname", "delivery_type", "subtotal", "tax", "total", "tanggal" FROM "transaction";
