@@ -320,3 +320,20 @@ VALUES
 
 SELECT "cart_id", "user_id" FROM "cart";
 
+
+-- cart_item
+INSERT INTO "cart_item" ("cart_id", "product_id", "variant_id", "product_size_id", "quantity")
+VALUES
+(1, 1, 1, 1, 1),
+(2, 2, 4, 5, 2),
+(3, 3, 5, 7, 1),
+(4, 4, 8, 11, 3),
+(5, 5, 9, 13, 1),
+(6, 6, 12, 16, 2),
+(7, 7, 13, 19, 1),
+(8, 8, 16, 22, 2),
+(9, 9, 17, 25, 1),
+(10, 10, 20, 28, 3);
+
+SELECT "cart_item_id", "cart_id", "product_id", "variant_id", "product_size_id", "quantity" FROM "cart_item";
+
