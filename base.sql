@@ -300,15 +300,15 @@ SELECT "transaction_id", "user_id", "promo_id", "fullname", "delivery_type", "su
 INSERT INTO "transaction_product" ("transaction_id", "product_id", "variant_id", "product_size_id", "quantity", "price_at_purchase")
 VALUES
 (1, 1, 1, 1, 1, 35000),
-(2, 2, 1, 1, 1, 25000),
-(3, 3, 1, 1, 1, 32000),
-(4, 4, 1, 1, 1, 28000),
-(5, 5, 1, 1, 1, 33000),
-(6, 6, 1, 1, 1, 35000),
-(7, 7, 1, 1, 2, 35000),
-(8, 8, 1, 1, 1, 30000),
-(9, 9, 1, 1, 2, 25000),
-(10, 10, 1, 1, 1, 32000);
+(2, 2, 4, 5, 1, 25000),
+(3, 3, 5, 7, 1, 32000),
+(4, 4, 8, 11, 1, 28000),
+(5, 5, 9, 13, 1, 33000),
+(6, 6, 12, 16, 1, 35000),
+(7, 7, 13, 19, 2, 35000),
+(8, 8, 16, 22, 1, 30000),
+(9, 9, 17, 25, 2, 25000),
+(10, 10, 20, 28, 1, 32000);
 
 SELECT "transaction_product_id", "transaction_id", "product_id", "variant_id", "product_size_id", "quantity", "price_at_purchase" FROM "transaction_product";
 
