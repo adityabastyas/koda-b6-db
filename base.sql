@@ -177,3 +177,20 @@ SELECT
     "profile_pic",
     "created_at"
 FROM "users";
+
+
+---PROMO
+INSERT INTO "promo" ("title", "description", "promo_type", "discount_value")
+VALUES
+('Promo Pagi', 'Diskon khusus pembelian pagi hari jam 7-9', 'voucher', 10),
+('Happy Hour', 'Diskon spesial jam 3-5 sore', 'voucher', 15),
+('Weekend Sale', 'Diskon setiap sabtu dan minggu', 'cashback', 20),
+('Member Discount', 'Diskon khusus member setia', 'voucher', 25),
+('Buy 1 Get 1', 'Beli 1 gratis 1 untuk semua minuman', 'voucher', 50),
+('Flash Sale', 'Diskon dadakan setiap hari jumat', 'cashback', 30),
+('Birthday Promo', 'Diskon spesial di hari ulang tahun kamu', 'voucher', 20),
+('New Member', 'Diskon untuk member baru', 'cashback', 15),
+('Payday Sale', 'Diskon akhir bulan setiap tanggal 25', 'voucher', 10),
+('Grand Opening', 'Diskon spesial pembukaan cabang baru', 'cashback', 35);
+
+SELECT "promo_id", "title", "description", "promo_type", "discount_value" FROM "promo";
