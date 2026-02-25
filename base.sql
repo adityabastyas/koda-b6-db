@@ -230,3 +230,19 @@ VALUES
 
 SELECT "product_images_id", "product_id", "path" FROM "product_images";
 
+--- reviews
+
+INSERT INTO "reviews" ("product_id", "user_id", "message", "rating")
+VALUES
+(1, 1, 'Caramel lattenya enak banget, manisnya pas', 5),
+(2, 2, 'Espressonya strong, cocok buat yang suka kopi', 5),
+(3, 3, 'Cappuccinonya foam susunya lembut banget', 5),
+(4, 4, 'Americanonya seger, ga terlalu pahit', 5),
+(5, 5, 'Vietnamese coffeenya mantap, kental manisnya pas', 5),
+(6, 6, 'Matcha lattenya enak, berasa banget', 5),
+(7, 7, 'Taro lattenya unik, cantik rasanya enak', 5),
+(8, 8, 'Chocolatenya creamy banget, rekomended', 5),
+(9, 9, 'Croissantnya renyah dan butternya kerasa', 5),
+(10, 10, 'Cheesecakenya lembut banget, ga terlalu sweet', 5);
+
+SELECT "reviews_id", "product_id", "user_id", "message", "rating" FROM "reviews";
