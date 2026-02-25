@@ -129,16 +129,16 @@ INSERT INTO "kategory" ("name")VALUES ('Food');
 
 INSERT INTO "products" ("kategory_id", "name", "description", "price", "image_url")
 VALUES
- (1, 'Caramel Latte', 'Kopi susu dengan sirup karamel yang manis', 35000, 'caramel_latte.jpg'),
- (1, 'Espresso', 'Kopi hitam tanpa susu', 25000, 'espresso.jpg'),
- (1, 'Cappuccino', 'Kopi dengan foam susu', 32000, 'cappuccino.jpg'),
- (1, 'Americano', 'Espresso yang dicampur air panas', 28000, 'americano.jpg'),
- (1, 'Vietnamese Coffee', 'Kopi susu kental manis ala vietnam', 33000, 'vietnamese_coffee.jpg'),
- (2, 'Matcha Latte', 'Minuman matcha dengan susu yang creamy', 35000, 'matcha_latte.jpg'),
- (2, 'Taro Latte', 'Minuman talas ungu dengan susu', 35000, 'taro_latte.jpg'),
- (2, 'Chocolate', 'Minuman coklat hangat yang kaya rasa', 30000, 'chocolate.jpg'),
- (3, 'Croissant', 'Roti croissant mentega yang renyah', 25000, 'croissant.jpg'),
- (3, 'Cheesecake', 'Kue keju lembut dengan topping strawberry', 32000, 'cheesecake.jpg');
+ (1, 'Caramel Latte', 'Kopi susu dengan sirup karamel yang manis', 35000, 'caramel_latte_1.jpg'),
+ (1, 'Espresso', 'Kopi hitam tanpa susu', 25000, 'espresso_1.jpg'),
+ (1, 'Cappuccino', 'Kopi dengan foam susu', 32000, 'cappuccino_1.jpg'),
+ (1, 'Americano', 'Espresso yang dicampur air panas', 28000, 'americano_1.jpg'),
+ (1, 'Vietnamese Coffee', 'Kopi susu kental manis ala vietnam', 33000, 'vietnamese_coffee_1.jpg'),
+ (2, 'Matcha Latte', 'Minuman matcha dengan susu yang creamy', 35000, 'matcha_latte_1.jpg'),
+ (2, 'Taro Latte', 'Minuman talas ungu dengan susu', 35000, 'taro_latte_1.jpg'),
+ (2, 'Chocolate', 'Minuman coklat hangat yang kaya rasa', 30000, 'chocolate_1.jpg'),
+ (3, 'Croissant', 'Roti croissant mentega yang renyah', 25000, 'croissant_1.jpg'),
+ (3, 'Cheesecake', 'Kue keju lembut dengan topping strawberry', 32000, 'cheesecake_1.jpg');
 
 SELECT "product_id", "kategory_id", "name", "description", "price", "image_url" FROM "products";  
 -- SELECT 
@@ -211,3 +211,22 @@ VALUES
 
 SELECT "variant_id", "product_id", "temperature", "add_price" FROM "product_variant";
 SELECT "product_size_id", "product_id", "name", "add_price" FROM "product_size";
+
+
+---- image
+
+INSERT INTO "product_images" ("product_id", "path")
+VALUES
+(1, 'caramel_latte_1.jpg'), (1, 'caramel_latte_2.jpg'), (1, 'caramel_latte_3.jpg'), (1, 'caramel_latte_4.jpg'),
+(2, 'espresso_1.jpg'), (2, 'espresso_2.jpg'), (2, 'espresso_3.jpg'), (2, 'espresso_4.jpg'),
+(3, 'cappuccino_1.jpg'), (3, 'cappuccino_2.jpg'), (3, 'cappuccino_3.jpg'), (3, 'cappuccino_4.jpg'),
+(4, 'americano_1.jpg'), (4, 'americano_2.jpg'), (4, 'americano_3.jpg'), (4, 'americano_4.jpg'),
+(5, 'vietnamese_coffee_1.jpg'), (5, 'vietnamese_coffee_2.jpg'), (5, 'vietnamese_coffee_3.jpg'), (5, 'vietnamese_coffee_4.jpg'),
+(6, 'matcha_latte_1.jpg'), (6, 'matcha_latte_2.jpg'), (6, 'matcha_latte_3.jpg'), (6, 'matcha_latte_4.jpg'),
+(7, 'taro_latte_1.jpg'), (7, 'taro_latte_2.jpg'), (7, 'taro_latte_3.jpg'), (7, 'taro_latte_4.jpg'),
+(8, 'chocolate_1.jpg'), (8, 'chocolate_2.jpg'), (8, 'chocolate_3.jpg'), (8, 'chocolate_4.jpg'),
+(9, 'croissant_1.jpg'), (9, 'croissant_2.jpg'), (9, 'croissant_3.jpg'), (9, 'croissant_4.jpg'),
+(10, 'cheesecake_1.jpg'), (10, 'cheesecake_2.jpg'), (10, 'cheesecake_3.jpg'), (10, 'cheesecake_4.jpg');
+
+SELECT "product_images_id", "product_id", "path" FROM "product_images";
+
