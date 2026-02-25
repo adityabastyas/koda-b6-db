@@ -150,3 +150,30 @@ SELECT "product_id", "kategory_id", "name", "description", "price", "image_url" 
 -- JOIN "kategory" k 
 --     ON p.kategory_id = k.kategory_id
 -- WHERE k.name = 'Coffee';
+
+INSERT INTO "users"
+("full_name", "email", "password", "address", "phone", "profile_pic")
+VALUES
+('adit', 'adit@email.com', '123456', 'Jakarta Selatan', '081234567801', 'adit.jpg'),
+('anton', 'anton@email.com', '123456', 'Bandung', '081234567802', 'anton.jpg'),
+('wildan', 'wildan@email.com', '123456', 'Surabaya', '081234567803', 'wildan.jpg'),
+('aska', 'aska@email.com', '123456', 'Medan', '081234567804', 'aska.jpg'),
+('ghifar', 'ghifar@email.com', '123456', 'Depok', '081234567805', 'ghifar.jpg'),
+('hilmi', 'hilmi@email.com', '123456', 'Bekasi', '081234567806', 'hilmi.jpg'),
+('jaka', 'jaka@email.com', '123456', 'Yogyakarta', '081234567807', 'jaka.jpg'),
+('virgil', 'virgil@email.com', '123456', 'Semarang', '081234567808', 'virgil.jpg'),
+('hilal', 'hilal@email.com', '123456', 'Malang', '081234567809', 'hilal.jpg'),
+('vincent', 'vincent@email.com', '123456', 'Bali', '081234567810', 'vincent.jpg'),
+('arif', 'arif@email.com', '123456', 'Makassar', '081234567811', 'arif.jpg'),
+('reza', 'reza@email.com', '123456', 'Palembang', '081234567812', 'reza.jpg');
+
+SELECT 
+    "user_id",
+    "full_name",
+    "email",
+    "password",
+    "address",
+    "phone",
+    "profile_pic",
+    "created_at"
+FROM "users";
