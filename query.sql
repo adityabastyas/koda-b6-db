@@ -49,7 +49,16 @@ JOIN "products" ON "products"."product_id" = "orders"."product_id";
 -- amati, dan query apa saja yg dibutuhkan
 
 SELECT "product_id", "name", "description", "price", "image_url" FROM "products"
-LIMIT 4
+LIMIT 4;
 
 SELECT "users"."full_name", "reviews"."message", "reviews"."rating" FROM "reviews"
-JOIN "users" ON "reviews"."user_id" = "users"."users_id"
+JOIN "users" ON "reviews"."user_id" = "users"."user_id";
+
+
+------
+
+-- halaaman product page
+-- ada filter pencarian ,kupon promo, dan ada lainnya
+-- apa saja yg di perluakan query di halaman tersebut
+
+SELECT "promo_id", "title", "description", "promo_type", "discount_value" FROM "promo";
