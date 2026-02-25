@@ -30,21 +30,14 @@ AND "product_size"."product_size_id" = 3;
 --   5            ---
 ---  7            ---
 
-SELECT
-    "cart_item"."quantity",
-    "cart_item"."quantity" *
-    (
-        SELECT
-            "products"."price"
-            + "product_variant"."add_price"
-            + "product_size"."add_price"
-        FROM "products"
-        JOIN "product_variant"
-            ON "products"."product_id" = "product_variant"."product_id"
-        JOIN "product_size"
-            ON "products"."product_id" = "product_size"."product_id"
-        WHERE "products"."product_id" = "cart_item"."product_id"
-        AND "product_variant"."variant_id" = "cart_item"."variant_id"
-        AND "product_size"."product_size_id" = "cart_item"."product_size_id"
-    ) AS "sub_total"
-FROM "cart_item";
+SELECT 
+    "orders"."quantity",
+    "products"."price" * "orders"."quantity" AS "sub_total"
+FROM (
+    SELECT 1 AS "product_id", 2 AS "quantity"
+    UNION ALL
+    SELECT 2 AS "product_id", 5 AS "quantity"
+    UNION ALL
+    SELECT 3 AS "product_id", 7 AS "quantity"
+) AS "orders"
+JOIN "products" ON "products"."product_id" = "orders"."product_id";
