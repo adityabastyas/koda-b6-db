@@ -4,7 +4,7 @@
 erDiagram
 
     USERS {
-        string user_id PK
+        int user_id PK
         string full_name
         string email
         string password
@@ -15,8 +15,8 @@ erDiagram
     }
 
     PRODUCTS {
-      string product_id PK
-      string kategory_id FK
+      int product_id PK
+      int kategory_id FK
       string name
       string description
       int price
@@ -24,13 +24,13 @@ erDiagram
     }
 
     KATEGORY {
-      string kategory_id PK
+      int kategory_id PK
       string name
     }
 
 
     PROMO {
-      string promo_id PK
+      int promo_id PK
       string title
       string description
       string promo_type
@@ -38,37 +38,37 @@ erDiagram
     }
 
     CART {
-      string cart_id PK
-      string user_id FK
+      int cart_id PK
+      int user_id FK
     }
 
     CART_ITEM {
-    string cart_item_id PK
-    string cart_id FK
-    string product_id FK
-    string variant_id FK
-    string product_size_id FK
+    int cart_item_id PK
+    int cart_id FK
+    int product_id FK
+    int variant_id FK
+    int product_size_id FK
     int quantity
     }
 
     PRODUCT_VARIANT{
-      string variant_id PK
-      string product_id FK
+      int variant_id PK
+      int product_id FK
       string temperature
       int add_price
     }
 
     PRODUCT_SIZE{
-      string product_size_id PK
-      string product_id FK
+      int product_size_id PK
+      int product_id FK
       string name
       int add_price
     }
 
     TRANSACTION {
-      string transaction_id PK
-      string user_id FK
-      string promo_id FK
+      int transaction_id PK
+      int user_id FK
+      int promo_id FK
       string fullname
       string email
       string address
@@ -80,32 +80,32 @@ erDiagram
     }
 
     TRANSACTION_PRODUCT {
-      string transaction_product_id PK
-      string transaction_id FK
-      string product_id FK
-      string variant_id FK
-      string product_size_id FK
+      int transaction_product_id PK
+      int transaction_id FK
+      int product_id FK
+      int variant_id FK
+      int product_size_id FK
       int quantity
       int price_at_purchase
     }
 
     PRODUCT_IMAGES{
-      string product_images_id PK
-      string product_id FK
+      int product_images_id PK
+      int product_id FK
       string path
     }
 
     REVIEWS{
-     string reviews_id PK
-     string product_id FK
-     string user_id FK
+     int reviews_id PK
+     int product_id FK
+     int user_id FK
      string message
      int rating
     }
 
     DISCOUNT{
-      string discount_id PK
-      string product_id FK
+      int discount_id PK
+      int product_id FK
       boolean flash_sale
       string description
       int discount_rate
