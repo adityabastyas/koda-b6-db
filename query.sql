@@ -7,3 +7,6 @@ FROM "products"
 JOIN "product_variant" ON "products"."product_id" = "product_variant"."product_id"
 JOIN "product_size" ON "products"."product_id" = "product_size"."product_id"
 WHERE "products"."product_id" = 1
+AND "product_variant"."temperature" = 'Hot'
+AND "product_size"."name" = 'Large';
+
