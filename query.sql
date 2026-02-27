@@ -62,3 +62,17 @@ JOIN "users" ON "reviews"."user_id" = "users"."user_id";
 -- apa saja yg di perluakan query di halaman tersebut
 
 SELECT "promo_id", "title", "description", "promo_type", "discount_value" FROM "promo";
+
+SELECT 
+  products.product_id,
+  products.name,
+  products.description,
+  products.price,
+  products.image_url,
+  discount.flash_sale,
+  products.price - (products.price * discount.discount_rate / 100) AS price_after_discount,
+  AVG(reviews.rating) AS rating
+FROM "products"
+JOIN discount ON "products".product_id = discount.product_id
+JOIN reviews ON "products".product_id = reviews.product_id
+GROUP BY "products".product_id, discount.flash_sale, discount.discount_rate
